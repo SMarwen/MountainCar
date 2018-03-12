@@ -8,7 +8,7 @@ def plot_graphs(episode_reward, episode_length):
     x_axis = range(len(episode_lengths))
 
     plt.figure(1)
-    plt.subplot(211)
+    # plt.subplot(211)
     plt.plot(x_axis, episode_lengths)
     plt.title('Episode Lenghts')
     plt.grid(True)
@@ -16,8 +16,8 @@ def plot_graphs(episode_reward, episode_length):
     plt.ylabel("Lenght")
 
     plt.figure(2)
-    plt.subplot(212)
-    plt.plot(x_axis, episode_rewards / np.max(np.abs(episode_rewards)))
+    # plt.subplot(212)
+    plt.plot(x_axis, episode_rewards )
     plt.title('Rewards')
     plt.grid(True)
     plt.xlabel("Episode")
@@ -87,7 +87,6 @@ class Experiment(object):
 
             # if interactive display, show update for the episode
             if interactive:
-                self.env.render()
                 self.env.close()
 
         plot_graphs(self.episode_reward, self.episode_length)
