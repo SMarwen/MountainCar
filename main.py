@@ -1,8 +1,8 @@
 import gym
 import numpy as np
 
-from Agent import Agent
-from Experiment import Experiment
+from agent import Agent
+from experiment import Experiment
 
 
 def main():
